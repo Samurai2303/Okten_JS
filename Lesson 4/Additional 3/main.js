@@ -1,49 +1,99 @@
 // 1. Створити пустий масив та :
 
-//     let a = [];
-//
+    let a = [];
+
 // //     a. заповнити його 50 парними числами за допомоги циклу.
-//
-// for (let i = 0; i < 50; i++) {
-//     a[i] = 10;
-// }
-//
+
+for (let i = 0; i < 50; i++) {
+    a[i] = 10;
+}
+
 // //     b. заповнити його 50 непарними числами за допомоги циклу.
-//
-// for (let i = 50; i < 100; i++) {
-//     a[i] = 9;
-// }
-//
+
+for (let i = 50; i < 100; i++) {
+    a[i] = 9;
+}
+
 // //     c. Заповнити масив 20ма рандомними числами. (Google: Generate random number JS)
-//
-// for (let i = 100; i < 120; i++) {
-//     a[i] = Math.random(4000)*100;
-//     Math.ceil(a[1]);
-// }
-//     console.log(a);
+
+for (let i = 100; i < 120; i++) {
+    a[i] = Math.round(Math.random() * 100);
+}
 
 // d. Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732 (Google: Generate random number JS)
+
+for (let i = 120; i < 140; i++) {
+    a[i] = Math.round(Math.random()*724+8);
+}
 // 2. Вивести за допомогою console.log кожен третій елемен
+
+for (let i = 0; i < a.length; i++) {
+    if (i % 3 === 0) {
+        console.log(a[i]);
+    }
+}
+
+    console.log('------------');
+
 // 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
+
+for (let i = 0; i < a.length; i++) {
+    if (i % 3 === 0 && a[i] % 2 === 0) {
+        console.log(a[i]);
+    }
+}
+
+    console.log('------------');
+
 // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
+
+let b = [];
+let i1 = 0;
+while (i1 < a.length) {
+    if (i1 % 3 === 0 && a[i1] % 2 === 0) {
+            b[i1] = a[i1];
+    }
+    i1++;
+}
+console.log(b);
+
+    console.log('------------');
+
 // 5. Вивести кожен елемент масиву, сусід справа якого є парним
 // EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
 
+for (let i = 0; i < a.length; i++) {
+    if (a[i + 1] % 2 === 0) {
+        console.log(a[i]);
+    }
+}
 
+    console.log('------------');
 
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
 
-let array = [100, 250, 50, 168, 120, 345, 188];
-let general = 0;
-for (let i = 0; i < array.length; i++) {
-    general += array[i];
+let purchase = [100, 250, 50, 168, 120, 345, 188];
+let sumPurchase = 0;
+for (let i = 0; i < purchase.length; i++) {
+    sumPurchase += purchase[i];
 }
-let finish = general / array.length;
-console.log(finish);
+let average = sumPurchase / purchase.length;
+console.log(Math.round(average));
 
+    console.log('------------');
 
-//
 // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+
+let d = [];
+for (let i = 0; i < 50; i++) {
+    d[i] = Math.round(Math.random() * 100);
+    d[i] = d[i] * 5;
+}
+let d1 = [];
+d1 = d;
+console.log(d1);
+
+
 // 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
 //
 //

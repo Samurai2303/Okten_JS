@@ -608,7 +608,17 @@ let array = [
 //     </div>
 // </div>
 
-
 /*За допомогою циклу вивести всю інформацію про пости використовуючи шаблон Template 1.1.
 * ЗА допомоги стилів побудувати структуру "сітки" по 5 об'єктів в лінію
 * */
+
+document.write(`<div class="father">`);
+document.write(`<div class="wrap">`);
+for (let i of array) {
+    document.write(`<div class="post-card">`);
+    document.write(`<h3>${i["id"]} - ${i["title"]}</h3>`);
+    document.write(`<p>${i["body"]}</p>`);
+    document.write(`</div>`);
+}
+document.write(`</div>`);
+document.write(`</div>`);
