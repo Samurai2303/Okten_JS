@@ -138,16 +138,52 @@ let usersWithCities = [];
 let indexUC = 0;
 
 for (let i = 0; i < usersWithId.length; i++) {
-    if (usersWithId[i]["id"] === citiesWithId[i]["user_id"]) {
+    if (usersWithId[i]["id"] === citiesWithId[0]["user_id"]) {
         usersWithCities[indexUC++] = {
             id: usersWithId[i]["id"],
             name: usersWithId[i]["name"],
             age: usersWithId[i]["age"],
             status: usersWithId[i]["status"],
             address: {
-                user_id: citiesWithId[i]["user_id"],
-                country: citiesWithId[i]["country"],
-                city: citiesWithId[i]["city"]
+                user_id: citiesWithId[0]["user_id"],
+                country: citiesWithId[0]["country"],
+                city: citiesWithId[0]["city"]
+            }
+        };
+    } else if (usersWithId[i]["id"] === citiesWithId[1]["user_id"]) {
+        usersWithCities[indexUC++] = {
+            id: usersWithId[i]["id"],
+            name: usersWithId[i]["name"],
+            age: usersWithId[i]["age"],
+            status: usersWithId[i]["status"],
+            address: {
+                user_id: citiesWithId[1]["user_id"],
+                country: citiesWithId[1]["country"],
+                city: citiesWithId[1]["city"]
+            }
+        };
+    } else if (usersWithId[i]["id"] === citiesWithId[2]["user_id"]) {
+        usersWithCities[indexUC++] = {
+            id: usersWithId[i]["id"],
+            name: usersWithId[i]["name"],
+            age: usersWithId[i]["age"],
+            status: usersWithId[i]["status"],
+            address: {
+                user_id: citiesWithId[2]["user_id"],
+                country: citiesWithId[2]["country"],
+                city: citiesWithId[2]["city"]
+            }
+        };
+    } else if (usersWithId[i]["id"] === citiesWithId[3]["user_id"]) {
+        usersWithCities[indexUC++] = {
+            id: usersWithId[i]["id"],
+            name: usersWithId[i]["name"],
+            age: usersWithId[i]["age"],
+            status: usersWithId[i]["status"],
+            address: {
+                user_id: citiesWithId[3]["user_id"],
+                country: citiesWithId[3]["country"],
+                city: citiesWithId[3]["city"]
             }
         };
     }
@@ -174,14 +210,35 @@ let g = [];
 for (let i = 0; i < c.length; i++) {
     g[i] = c[i];
 }
-console.log(g);
-
-console.log('------------');
 
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for зібрати всі букви в слово.
 
+let abc = ['a', 'b', 'c'];
 
+let empty1abc = [];
+for (let i = 0; i < abc.length; i++) {
+    empty1abc += abc[i];
+}
+console.log(empty1abc);
 
+console.log('------------');
 
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу while зібрати всі букви в слово.
+
+let empty2abc = [];
+let i1 = 0;
+while (i1 < abc.length) {
+    empty2abc += abc[i1];
+    i1++;
+}
+console.log(empty2abc);
+
+console.log('------------');
+
 // - Дано масив: [ 'a', 'b', 'c'] . За допомогою циклу for of зібрати всі букви в слово.
+
+let empty3abc = [];
+for (let i of abc) {
+    empty3abc += i;
+}
+console.log(empty3abc);
