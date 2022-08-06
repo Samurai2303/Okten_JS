@@ -137,58 +137,80 @@ let citiesWithId = [
 let usersWithCities = [];
 let indexUC = 0;
 
+
 for (let i = 0; i < usersWithId.length; i++) {
-    if (usersWithId[i]["id"] === citiesWithId[0]["user_id"]) {
-        usersWithCities[indexUC++] = {
-            id: usersWithId[i]["id"],
-            name: usersWithId[i]["name"],
-            age: usersWithId[i]["age"],
-            status: usersWithId[i]["status"],
-            address: {
-                user_id: citiesWithId[0]["user_id"],
-                country: citiesWithId[0]["country"],
-                city: citiesWithId[0]["city"]
-            }
-        };
-    } else if (usersWithId[i]["id"] === citiesWithId[1]["user_id"]) {
-        usersWithCities[indexUC++] = {
-            id: usersWithId[i]["id"],
-            name: usersWithId[i]["name"],
-            age: usersWithId[i]["age"],
-            status: usersWithId[i]["status"],
-            address: {
-                user_id: citiesWithId[1]["user_id"],
-                country: citiesWithId[1]["country"],
-                city: citiesWithId[1]["city"]
-            }
-        };
-    } else if (usersWithId[i]["id"] === citiesWithId[2]["user_id"]) {
-        usersWithCities[indexUC++] = {
-            id: usersWithId[i]["id"],
-            name: usersWithId[i]["name"],
-            age: usersWithId[i]["age"],
-            status: usersWithId[i]["status"],
-            address: {
-                user_id: citiesWithId[2]["user_id"],
-                country: citiesWithId[2]["country"],
-                city: citiesWithId[2]["city"]
-            }
-        };
-    } else if (usersWithId[i]["id"] === citiesWithId[3]["user_id"]) {
-        usersWithCities[indexUC++] = {
-            id: usersWithId[i]["id"],
-            name: usersWithId[i]["name"],
-            age: usersWithId[i]["age"],
-            status: usersWithId[i]["status"],
-            address: {
-                user_id: citiesWithId[3]["user_id"],
-                country: citiesWithId[3]["country"],
-                city: citiesWithId[3]["city"]
-            }
-        };
+    for (let b = 0; b < citiesWithId.length; b++) {
+        if (usersWithId[i]["id"] === citiesWithId[b]["user_id"]) {
+            usersWithCities[indexUC++] = {
+                id: usersWithId[i]["id"],
+                name: usersWithId[i]["name"],
+                age: usersWithId[i]["age"],
+                status: usersWithId[i]["status"],
+                address: {
+                    user_id: citiesWithId[b]["user_id"],
+                    country: citiesWithId[b]["country"],
+                    city: citiesWithId[b]["city"]
+                }
+            };
+
+        }
     }
 }
+
 console.log(usersWithCities);
+
+
+// for (let i = 0; i < usersWithId.length; i++) {
+//     if (usersWithId[i]["id"] === citiesWithId[0]["user_id"]) {
+//         usersWithCities[indexUC++] = {
+//             id: usersWithId[i]["id"],
+//             name: usersWithId[i]["name"],
+//             age: usersWithId[i]["age"],
+//             status: usersWithId[i]["status"],
+//             address: {
+//                 user_id: citiesWithId[0]["user_id"],
+//                 country: citiesWithId[0]["country"],
+//                 city: citiesWithId[0]["city"]
+//             }
+//         };
+//     } else if (usersWithId[i]["id"] === citiesWithId[1]["user_id"]) {
+//         usersWithCities[indexUC++] = {
+//             id: usersWithId[i]["id"],
+//             name: usersWithId[i]["name"],
+//             age: usersWithId[i]["age"],
+//             status: usersWithId[i]["status"],
+//             address: {
+//                 user_id: citiesWithId[1]["user_id"],
+//                 country: citiesWithId[1]["country"],
+//                 city: citiesWithId[1]["city"]
+//             }
+//         };
+//     } else if (usersWithId[i]["id"] === citiesWithId[2]["user_id"]) {
+//         usersWithCities[indexUC++] = {
+//             id: usersWithId[i]["id"],
+//             name: usersWithId[i]["name"],
+//             age: usersWithId[i]["age"],
+//             status: usersWithId[i]["status"],
+//             address: {
+//                 user_id: citiesWithId[2]["user_id"],
+//                 country: citiesWithId[2]["country"],
+//                 city: citiesWithId[2]["city"]
+//             }
+//         };
+//     } else if (usersWithId[i]["id"] === citiesWithId[3]["user_id"]) {
+//         usersWithCities[indexUC++] = {
+//             id: usersWithId[i]["id"],
+//             name: usersWithId[i]["name"],
+//             age: usersWithId[i]["age"],
+//             status: usersWithId[i]["status"],
+//             address: {
+//                 user_id: citiesWithId[3]["user_id"],
+//                 country: citiesWithId[3]["country"],
+//                 city: citiesWithId[3]["city"]
+//             }
+//         };
+//     }
+// }
 
 
 console.log('------------');
