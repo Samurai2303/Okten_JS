@@ -138,25 +138,30 @@ class Car1 {
         this.yearOfProduction = yearOfProduction;
         this.maxSpeed = maxSpeed;
         this.engineVolume = engineVolume;
-        this.drive = function () {
-            console.log(`Їдемо зі швидкістю ${maxSpeed} на годину`);
-        }
-        this.info = function () {
-            console.log(`model - ${model}`);
-            console.log(`producer - ${producer}`);
-            console.log(`yearOfProduction - ${yearOfProduction}`);
-            console.log(`maxSpeed - ${maxSpeed}`);
-            console.log(`engineVolume - ${engineVolume}`);
-        }
-        this.increaseMaxSpeed = function (newSpeed) {
-            this.maxSpeed = newSpeed;
-        }
-        this.changeYear = function (newValue) {
-            this.yearOfProduction = newValue;
-        }
-        this.addDriver = function (driver) {
-            this.driver = driver;
-        }
+    }
+
+    drive() {
+        console.log(`Їдемо зі швидкістю ${maxSpeed} на годину`);
+    }
+
+    info() {
+        console.log(`model - ${model}`);
+        console.log(`producer - ${producer}`);
+        console.log(`yearOfProduction - ${yearOfProduction}`);
+        console.log(`maxSpeed - ${maxSpeed}`);
+        console.log(`engineVolume - ${engineVolume}`);
+    }
+
+    increaseMaxSpeed(newSpeed) {
+        this.maxSpeed = newSpeed;
+    }
+
+    changeYear(newValue) {
+        this.yearOfProduction = newValue;
+    }
+
+    addDriver(driver) {
+        this.driver = driver;
     }
 
 }
