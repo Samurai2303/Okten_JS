@@ -1,0 +1,30 @@
+.postInfo {
+    width: 500px;
+    background: lightskyblue;
+    border: 3px solid darkblue;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.comments {
+    width: 1200px;
+    background: lightskyblue;
+    border-radius: 10px;
+    border: 4px solid darkblue;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.comments > div {
+    width: 250px;
+    border: 2px solid darkblue;
+    background: cornflowerblue;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+    font-size: 18px;
+}

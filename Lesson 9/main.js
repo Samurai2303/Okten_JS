@@ -281,34 +281,33 @@ inputDiv.append(input, button2);
 //     При натисканні кнопки, вся ця інформація зчитується і формується табличка, з відповідним вмістом.
 // (Додатковачастина для завдання)
 
-let wrapForForm = document.createElement('div');
-wrapForForm.classList.add('wrapForForm')
-document.body.appendChild(wrapForForm);
-let inputLine = document.createElement('input');
+let inputRows = document.createElement('input');
 let inputCells = document.createElement('input');
 let inputContent = document.createElement('input');
 let buttonTable = document.createElement('button');
-inputLine.setAttribute('type', 'number');
+buttonTable.classList.add('buttonTable');
+inputRows.setAttribute('type', 'number');
 inputCells.setAttribute('type', 'number');
 inputContent.setAttribute('type', 'text');
-inputLine.setAttribute('placeholder', 'Amount of lines');
+inputRows.setAttribute('placeholder', 'Amount of rows');
 inputCells.setAttribute('placeholder', 'Amount of cells');
 inputContent.setAttribute('placeholder', 'Content');
-wrapForForm.append(inputLine, inputCells, inputContent, buttonTable);
+document.body.append(inputRows, inputCells, inputContent, buttonTable);
 buttonTable.onclick = function () {
-    let mainWrap = document.createElement('div');
-    document.body.appendChild(mainWrap);
-    mainWrap.classList.add('mainWrap');
-    for (let i = 0; i < inputLine.value; i++) {
-        let lineDiv = document.createElement('div');
-        mainWrap.appendChild(lineDiv);
-        lineDiv.classList.add('lineDiv');
+    let table = document.createElement('table');
+    document.body.appendChild(table);
+    for (let i = 0; i < inputRows.value; i++) {
+        let tr = document.createElement('tr');
+        table.appendChild(tr);
         for (let j = 0; j < inputCells.value; j++) {
-            let cell = document.createElement('div');
-            lineDiv.appendChild(cell);
-            cell.classList.add('cell');
-            cell.innerText = inputContent.value;
+            let td = document.createElement('td');
+            tr.appendChild(td);
+            td.innerText = inputContent.value;
         }
     }
 };
+
+
+
+
 
